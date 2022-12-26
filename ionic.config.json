@@ -1,0 +1,9 @@
+{
+  "name": "fristtest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+  
+  
+}

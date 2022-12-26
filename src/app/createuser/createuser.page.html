@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>createuser</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id = "container">
+    <div id = "card">
+        <ion-card>
+          <ion-grid>
+            <ion-col>
+              <ion-label id = "title-label">建立新帳號</ion-label>
+              <ion-icon id="out_color" name="log-out-outline" (click) ="out()"></ion-icon>
+              <ion-item>
+                <ion-label position="floating">輸入帳號：</ion-label>
+                <ion-input [(ngModel)] = "setuser"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">輸入密碼：</ion-label>
+                <ion-input [(ngModel)] = "setpassword"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">確認輸入密碼：</ion-label>
+                <ion-input [(ngModel)] = "checkpassword"></ion-input>
+              </ion-item>
+              <ion-button (click) = "create()">創立</ion-button>
+            </ion-col>
+          </ion-grid>
+        </ion-card>
+    </div>
+  </div>
+</ion-content>

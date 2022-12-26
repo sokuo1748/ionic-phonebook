@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>createcustomer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id = "container">
+    <div id = "card">
+        <ion-card>
+          <ion-grid>
+            <ion-col>
+              
+              <ion-label id = "title-label">建立新聯絡人</ion-label>
+              <ion-icon id="out_color" name="log-out-outline" (click) ="out()"></ion-icon>
+              <ion-item>
+                <ion-label position="floating">輸入姓名：</ion-label>
+                <ion-input [(ngModel)] = "setname"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">輸入電話：</ion-label>
+                <ion-input [(ngModel)] = "setphone"></ion-input>
+              </ion-item>
+              <ion-button (click) = "create()">創立</ion-button>
+            </ion-col>
+          </ion-grid>
+        </ion-card>
+    </div>
+  </div>
+</ion-content>

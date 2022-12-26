@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>index</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <div id ="card">
+      <ion-card>
+          <ion-icon id="add_color" name="add-circle-outline" (click) ="add()"></ion-icon>
+          <ion-label>電話簿 </ion-label>
+          <ion-icon id="out_color" name="log-out-outline" (click) ="out()"></ion-icon>
+          <ion-item>
+            <ion-col> 姓名 </ion-col>
+            <ion-col> 電話 </ion-col>
+          </ion-item>
+          
+          <ion-item-sliding *ngFor = "let customer of customers">
+          <ion-item>
+            <ion-col> {{customer.name}} </ion-col>
+            <ion-col> {{customer.phone}} </ion-col>
+          </ion-item>
+          <ion-item-options side="end" >
+            
+              <ion-icon id="dele_color" name="trash-outline" (click)="dele(customer)"></ion-icon>
+              
+            
+          </ion-item-options>
+          </ion-item-sliding> 
+        
+      </ion-card>
+    </div>
+  </div>
+  
+</ion-content>
